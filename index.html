@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -49,5 +50,111 @@
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+            <!-- Slider main container -->
+        <div class="swiper">
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+        <!-- Slides -->
+                <div class="swiper-slide"><img src="./assets/ApacheKafka.svg" alt="livro sobre apache kafka e spring boot da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/Lideranca.svg" alt="livro sobre liderança da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/Javascript.svg" alt="livro sobre Jvascript  da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/Guia Front-end.svg" alt="livro sobre Front-end  da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/Portugol.svg" alt="livro sobre Portubol  da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/Acessibilidade.svg" alt="livro sobre Acessibilidade da alura books"></div>
+            ...
+            </div>
+        
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+        <div class="card">
+            <div class="card__descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao-texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <img src="./assets/Angular.svg" class="descricao__imagem">
+            </div>
+
+            <div class="card__botoes">
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="/assets/Favoritos.svg" alt="favritar livro"></li>
+                    <li class="botoes__item"><img src="/assets/Compras.svg" alt="adicionar no carrinho de compras"></li>
+                </ul>
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Mais vendidos</h2>
+                <!-- Slider main container -->
+            <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+            <!-- Slides -->
+                    <div class="swiper-slide"><img src="./assets/Construct2.svg" alt="livro sobre apache kafka e spring boot da alura books"></div>
+                    <div class="swiper-slide"><img src="./assets/ReactNative.svg" alt="livro sobre liderança da alura books"></div>
+                    <div class="swiper-slide"><img src="./assets/MetricasAgeis.svg" alt="livro sobre Jvascript  da alura books"></div>
+                    <div class="swiper-slide"><img src="./assets/Gestao.svg" alt="livro sobre Front-end  da alura books"></div>
+                    <div class="swiper-slide"><img src="./assets/UX.svg" alt="livro sobre Portubol  da alura books"></div>
+                    <div class="swiper-slide"><img src="./assets/Nodejs.svg" alt="livro sobre Acessibilidade da alura books"></div>
+                ...
+                </div>
+            
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+            <div class="card">
+                <div class="card__descricao">
+                    <div class="descricao">
+                        <img src="./assets/Estrelinhas.svg" class="descricao__estrelas">
+                        <h3 class="descricao__titulo">Autora do Mês</h3>
+                        <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
+                        <p class="descricao-texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+                    </div>
+                    <img src="./assets/Escritora.svg" class="descricao__imagem">
+                </div>
+    
+                <div class="card__botoes">
+                    <ul class="botoes">
+                        <li class="botoes__item"><img src="/assets/Favoritos.svg" alt="favoritar livro"></li>
+                        <li class="botoes__item"><img src="/assets/Compras.svg" alt="adicionar no carrinho de compras"></li>
+                    </ul>
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                </div>
+            </div>
+    
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
 </body>
 </html>
