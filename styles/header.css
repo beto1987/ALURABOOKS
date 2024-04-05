@@ -108,6 +108,10 @@
         color: var(--preto)
     }
 
+    .lista-menu__titulo {
+        display: none;
+    }
+
     .container__imagem-transparente {
         display: none;
     }
